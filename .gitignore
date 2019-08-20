@@ -27,3 +27,11 @@ mvnw
 *.cmd
 
 HELP.md
+
+.idea/compiler.xml
+
+.idea/libraries/
+
+.idea/
+
+*.iml
