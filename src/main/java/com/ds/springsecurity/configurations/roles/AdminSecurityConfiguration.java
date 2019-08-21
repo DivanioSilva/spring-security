@@ -20,7 +20,7 @@ public class AdminSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.antMatcher("/admin").addFilter(getDigestAuthFilter()).exceptionHandling()
                 .authenticationEntryPoint(getDigestEntryPoint())
-                .and().authorizeRequests().antMatchers("/test")
+                .and().authorizeRequests().antMatchers("/admin")
                 .hasRole("ADMIN");
     }
 
