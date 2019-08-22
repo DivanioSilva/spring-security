@@ -24,6 +24,7 @@ public class SpringSecurityApplication implements CommandLineRunner {
 		Person p = new Person();
 		p.setName("Maria");
 		p.setAge(18);
+		p.setCity("Lisbon");
 		ValidatorFactory validator = Validation.buildDefaultValidatorFactory();
 		Set<ConstraintViolation<Person>> validationErrors = validator.getValidator().validate(p);
 

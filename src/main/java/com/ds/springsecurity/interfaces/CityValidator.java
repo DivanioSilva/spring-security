@@ -1,7 +1,7 @@
 package com.ds.springsecurity.interfaces;
 
 import com.ds.springsecurity.interfaces.impl.AgeValidatorImpl;
-import com.ds.springsecurity.interfaces.impl.NameValidatorImpl;
+import com.ds.springsecurity.interfaces.impl.CityValidatorImpl;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -12,14 +12,14 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@Constraint(validatedBy = AgeValidatorImpl.class)
-public @interface AgeValidator {
+@Constraint(validatedBy = CityValidatorImpl.class)
+public @interface CityValidator {
 
-    String message() default "Persons age isn't accepted";
+    String message() default "Only Lisbon is accepted";
 
-    int mininumAge() default 18;
+    String city() default "Lisbon";
 
-    Class<?>[] groups() default {}; //Required by Constraint
+    Class<?>[] groups() default {};
 
-    Class<? extends Payload>[] payload() default {}; //Required by Constraint
+    Class<? extends Payload>[] payload() default {};
 }
